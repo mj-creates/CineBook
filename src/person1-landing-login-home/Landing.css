@@ -1,0 +1,151 @@
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fdf6e9;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shape 1 - top left square */
+.landing-page::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #ffe08a;
+  border: 4px solid #1a1a1a;
+  border-radius: 30px;
+  top: 50px;
+  left: 60px;
+  transform: rotate(-12deg);
+  z-index: 0;
+}
+
+/* Shape 2 - bottom right circle */
+.landing-page::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: #c9b8ff;
+  border: 4px solid #1a1a1a;
+  border-radius: 50%;
+  bottom: 60px;
+  right: 90px;
+  z-index: 0;
+}
+
+.landing-card {
+  background: #ffffff;
+  border: 4px solid #1a1a1a;
+  border-radius: 24px;
+  padding: 32px 40px;
+  box-shadow: 8px 8px 0px #1a1a1a;
+  z-index: 1;
+  max-width: 420px;
+  position: relative;
+}
+
+/* Extra shapes around the card */
+.shape-pink {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #ff9ecb;
+  border: 3px solid #1a1a1a;
+  border-radius: 16px;
+  top: -30px;
+  right: -30px;
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+.shape-mint {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #9ef0b0;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  bottom: -20px;
+  left: -25px;
+  z-index: 2;
+}
+
+.shape-yellow-small {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: #ffe08a;
+  border: 4px solid #1a1a1a;
+  border-radius: 20px;
+  top: 120px;
+  right: 60px;
+  transform: rotate(20deg);
+  z-index: 0;
+}
+
+.shape-purple-small {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #c9b8ff;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  top: 140px;
+  left: 100px;
+  z-index: 0;
+}
+
+.landing-page h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.landing-page h1 span {
+  background: #ff9ecb;
+  padding: 2px 14px;
+  border: 3px solid #1a1a1a;
+  border-radius: 12px;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+.landing-page p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.landing-page button {
+  padding: 12px 34px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #9ef0b0;
+  border: 3px solid #1a1a1a;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #1a1a1a;
+  transition: all 0.15s ease;
+}
+
+.landing-page button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #1a1a1a;
+}
+
+.landing-page button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px #1a1a1a;
+}

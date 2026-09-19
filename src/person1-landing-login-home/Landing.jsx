@@ -1,6 +1,7 @@
 import './Landing.css';
-
+import { useNavigate } from 'react-router-dom';
 function Landing() {
+  const navigate = useNavigate();
   return (
     <div className="landing-page">
       <div className="shape-yellow-small"></div>
@@ -10,7 +11,7 @@ function Landing() {
         <div className="shape-mint"></div>
         <h1>Cine<span>Book</span></h1>
         <p>Book your movie tickets in seconds</p>
-        <button onClick={() => alert("Navigate to Login - we'll wire this up next")}>
+        <button onClick={() => navigate('/Home')} className="get-started-btn">
           Get Started
         </button>
       </div>

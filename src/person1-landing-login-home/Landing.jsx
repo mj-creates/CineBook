@@ -11,7 +11,7 @@ function Landing() {
         <div className="shape-mint"></div>
         <h1>Cine<span>Book</span></h1>
         <p>Book your movie tickets in seconds</p>
-        <button onClick={() => navigate('/Home')} className="get-started-btn">
+        <button onClick={() => navigate('/login')} className="get-started-btn">
           Get Started
         </button>
       </div>

@@ -1,0 +1,182 @@
+.payment-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #f4f6f8;
+  box-sizing: border-box;
+}
+
+.payment-card,
+.payment-success {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+.payment-card h1,
+.payment-success h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.payment-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.payment-timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+}
+
+.payment-timer strong {
+  font-size: 24px;
+}
+
+.booking-summary {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.booking-summary h2 {
+  margin-bottom: 10px;
+}
+
+.booking-summary p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.price-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-section > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.total-row {
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.payment-method {
+  padding: 20px 0;
+}
+
+.payment-method h3 {
+  margin-bottom: 12px;
+}
+
+.payment-option {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.payment-option:hover {
+  border-color: #555;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pay-button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.pay-button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+/* Success */
+
+.payment-success {
+  text-align: center;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #d4edda;
+  color: #218838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #666;
+}
+
+.ticket-details {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.ticket-details p {
+  margin: 10px 0;
+}
+
+.success-buttons button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.success-buttons .secondary-button {
+  background: white;
+  color: #222;
+  border: 1px solid #ccc;
+}

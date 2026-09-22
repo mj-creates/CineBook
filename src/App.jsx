@@ -1,16 +1,50 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './person1-landing-login-home/Landing';
-import Login from './person1-landing-login-home/Login';
-import Home from './person1-landing-login-home/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Landing from "./person1-landing-login-home/Landing";
+import Login from "./person1-landing-login-home/Login";
+import Home from "./person1-landing-login-home/Home";
+
+import SeatSelection from "./person2-seat-selection/SeatSelection";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/seats/:movieId" element={<div>Seat selection coming soon</div>} />
+
+        {/* Person 1 - Landing Page */}
+        <Route
+          path="/"
+          element={<Landing />}
+        />
+
+        {/* Person 1 - Login Page */}
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        {/* Person 1 - Home Page */}
+        <Route
+          path="/home"
+          element={<Home />}
+        />
+
+        {/* Person 2 - Seat Selection */}
+        <Route
+          path="/seat-selection"
+          element={<SeatSelection />}
+        />
+
+        {/* Existing seats route */}
+        <Route
+          path="/seats/:movieId"
+          element={
+            <div>
+              Seat selection coming soon
+            </div>
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );

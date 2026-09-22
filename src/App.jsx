@@ -6,6 +6,9 @@ import Home from "./person1-landing-login-home/Home";
 
 import SeatSelection from "./person2-seat-selection/SeatSelection";
 
+import Payment from "./person3-payment-history/Payment";
+import BookingHistory from "./person3-payment-history/BookingHistory";
+
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +36,18 @@ function App() {
         <Route
           path="/seat-selection"
           element={<SeatSelection />}
+        />
+
+        {/* Person 3 - Payment */}
+        <Route
+          path="/payment"
+          element={<Payment />}
+        />
+
+        {/* Person 3 - Booking History */}
+        <Route
+          path="/booking-history"
+          element={<BookingHistory />}
         />
 
         {/* Existing seats route */}

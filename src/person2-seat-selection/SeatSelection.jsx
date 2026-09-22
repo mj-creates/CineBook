@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import SeatGrid from "./SeatGrid";
 
@@ -8,11 +8,10 @@ import { useBooking } from "../context/BookingContext";
 
 import "./SeatSelection.css";
 
-
 function SeatSelection() {
 
   const location = useLocation();
-
+  const navigate = useNavigate();
 
   const {
     selectedSeats,
@@ -40,20 +39,24 @@ function SeatSelection() {
   // Continue button
   function handleContinue() {
 
-    // User must select at least one seat
-    if (selectedSeats.length === 0) {
+  if (selectedSeats.length === 0) {
 
-      alert("Please select at least one seat.");
+    alert("Please select at least one seat.");
 
-      return;
-    }
-
-
-    // Start the 2-minute timer
-    startTimer();
-
+    return;
   }
 
+  // Start the 2-minute timer
+  startTimer();
+
+  // Go to Payment page
+  navigate("/payment", {
+    state: {
+      movie,
+      showtime
+    }
+  });
+}
 
   return (
 

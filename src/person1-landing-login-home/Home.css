@@ -249,7 +249,7 @@
   background: #ff0a17;
 }
 
-/* responsive tweaks */
+
 @media (max-width: 1024px) {
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);

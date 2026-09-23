@@ -27,15 +27,8 @@ function Payment() {
   const pricePerSeat = 200;
   const totalAmount = selectedSeats.length * pricePerSeat;
 
-  // Redirect if no seats are selected
-  useEffect(() => {
-    if (
-      selectedSeats.length === 0 &&
-      !paymentDone
-    ) {
-      // Don't immediately redirect so the user can see the message
-    }
-  }, [selectedSeats, paymentDone]);
+  
+
 
   function handlePayment() {
     if (selectedSeats.length === 0) {
@@ -48,7 +41,7 @@ function Payment() {
       return;
     }
 
-    // Save data BEFORE confirmBooking clears selectedSeats
+    
     const booking = {
       id: `CB-${Date.now()}`,
       movieId: movie.id,
@@ -72,7 +65,7 @@ function Payment() {
       ])
     );
 
-    // Permanently lock seats
+    
     confirmBooking(
       movie.id,
       showtime
@@ -162,7 +155,7 @@ function Payment() {
           Complete your payment before the timer expires.
         </p>
 
-        {/* Timer */}
+        
 
         <div className="payment-timer">
 
@@ -176,7 +169,7 @@ function Payment() {
 
         </div>
 
-        {/* Movie details */}
+        
 
         <div className="booking-summary">
 
@@ -199,7 +192,7 @@ function Payment() {
 
         </div>
 
-        {/* Price */}
+        
 
         <div className="price-section">
 
@@ -227,7 +220,7 @@ function Payment() {
 
         </div>
 
-        {/* Payment information */}
+        
 
         <div className="payment-method">
 
@@ -249,7 +242,7 @@ function Payment() {
 
         </div>
 
-        {/* Pay */}
+        
 
         <button
           className="pay-button"

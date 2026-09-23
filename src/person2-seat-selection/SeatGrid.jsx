@@ -26,7 +26,7 @@ function SeatGrid({
     );
 
 
-  // Create 20 seats
+  
   const seats = Array.from(
     { length: 20 },
     (_, index) => index + 1

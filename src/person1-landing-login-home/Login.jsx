@@ -21,37 +21,28 @@ function Login() {
 
     return (
         <div className="login-page">
-            <div className="login-visual">
+            <div className="login-card">
                 <h1>Cine<span>Book</span></h1>
-                <p className="visual-tagline">Grab your seat before someone else does 🍿</p>
-                <div className="floating-shape shape-1"></div>
-                <div className="floating-shape shape-2"></div>
-                <div className="floating-shape shape-3"></div>
-            </div>
+                <h2>Welcome back</h2>
+                <p>Enter your details to continue</p>
 
-            <div className="login-form-side">
-                <div className="login-card">
-                    <h2>Welcome back</h2>
-                    <p>Enter your details to continue</p>
+                <form onSubmit={handleLogin}>
+                    <input
+                        type="text"
+                        placeholder="e.g. Rohan Reddy"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                        type="email"
+                        placeholder="e.g. rohan@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button type="submit">Continue to Movies →</button>
+                </form>
 
-                    <form onSubmit={handleLogin}>
-                        <input
-                            type="text"
-                            placeholder="e.g. Rohan Reddy"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <input
-                            type="email"
-                            placeholder="e.g. rohan@email.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <button type="submit">Continue to Movies →</button>
-                    </form>
-
-                    <p className="login-hint">New here? You'll land straight on our now-showing list.</p>
-                </div>
+                <p className="login-hint">New here? You'll land straight on our now-showing list.</p>
             </div>
         </div>
     );

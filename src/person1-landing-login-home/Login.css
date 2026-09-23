@@ -1,113 +1,42 @@
 .login-page {
   min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Work Sans', sans-serif;
-  background: #ffffff;
-}
-
-.login-visual {
-  flex: 0.85;
   background: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  border-right: 1px solid #cccccc;
-}
-
-.login-visual h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #0d0d0d;
-  z-index: 1;
-  text-align: left;
-  width: 100%;
-  max-width: 300px;
-}
-
-.login-visual h1 span {
-  background: transparent;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  color: #e50914;
-  display: inline-block;
-  margin-left: 8px;
-  line-height: 1.4;
-}
-
-.visual-tagline {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #666666;
-  margin-top: 16px;
-  z-index: 1;
-  width: 100%;
-  max-width: 300px;
-  text-align: left;
-}
-
-.floating-shape {
-  position: absolute;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-}
-
-.shape-1 {
-  width: 100px;
-  height: 100px;
-  background: #ffffff;
-  border-radius: 4px;
-  top: 60px;
-  left: 60px;
-  transform: rotate(-15deg);
-}
-
-.shape-2 {
-  width: 70px;
-  height: 70px;
-  background: #ffffff;
-  border-radius: 4px;
-  bottom: 80px;
-  right: 70px;
-}
-
-.shape-3 {
-  width: 50px;
-  height: 50px;
-  background: #ffffff;
-  border-radius: 4px;
-  bottom: 140px;
-  left: 100px;
-  transform: rotate(20deg);
-}
-
-.login-form-side {
-  flex: 1.15;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
 }
 
 .login-card {
   width: 100%;
-  max-width: 380px;
-  padding: 0 40px;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+
+.login-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-card h1 span {
+  color: #e50914;
+  margin-left: 8px;
 }
 
 .login-card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: #0d0d0d;
   margin-bottom: 6px;
-  text-align: left;
 }
 
 .login-card p {
@@ -115,7 +44,6 @@
   font-size: 0.95rem;
   color: #666666;
   margin-bottom: 28px;
-  text-align: left;
 }
 
 .login-card form {
@@ -131,7 +59,7 @@
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   color: #0d0d0d;
-  background: #f5f5f5;
+  background: #f9f9f9;
   border: 1px solid #cccccc;
   border-radius: 4px;
   outline: none;
@@ -155,7 +83,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: none;
   margin-top: 8px;
   transition: background-color 0.2s ease;
 }
@@ -170,5 +97,4 @@
   color: #666666;
   margin-top: 20px;
   margin-bottom: 0;
-  text-align: left;
 }

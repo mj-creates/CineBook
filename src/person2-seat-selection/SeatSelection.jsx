@@ -21,9 +21,9 @@ function SeatSelection() {
   } = useBooking();
 
 
-  // Temporary demo movie.
-  // Later Person 1's Home page will provide
-  // the actual movie and showtime.
+  
+  
+  
 
   const movie =
     location.state?.movie || {
@@ -36,7 +36,7 @@ function SeatSelection() {
     location.state?.showtime || "Matinee";
 
 
-  // Continue button
+  
   function handleContinue() {
 
   if (selectedSeats.length === 0) {
@@ -46,10 +46,10 @@ function SeatSelection() {
     return;
   }
 
-  // Start the 2-minute timer
+  
   startTimer();
 
-  // Go to Payment page
+  
   navigate("/payment", {
     state: {
       movie,
@@ -62,35 +62,35 @@ function SeatSelection() {
 
     <div className="seat-page">
 
-      {/* Page title */}
+      
 
       <h1>
         Select Your Seats
       </h1>
 
 
-      {/* Movie name */}
+      
 
       <h2>
         {movie.title}
       </h2>
 
 
-      {/* Showtime */}
+      
 
       <p>
         Showtime: {showtime}
       </p>
 
 
-      {/* Screen */}
+      
 
       <div className="screen">
         SCREEN
       </div>
 
 
-      {/* 20 seats */}
+      
 
       <SeatGrid
         movieId={movie.id}
@@ -98,7 +98,7 @@ function SeatSelection() {
       />
 
 
-      {/* Seat legend */}
+      
 
       <div className="seat-legend">
 
@@ -117,7 +117,7 @@ function SeatSelection() {
       </div>
 
 
-      {/* Selected seats */}
+      
 
       <div className="selected-section">
 
@@ -143,7 +143,7 @@ function SeatSelection() {
       </div>
 
 
-      {/* Timer */}
+      
 
       <div className="timer">
 
@@ -156,7 +156,7 @@ function SeatSelection() {
       </div>
 
 
-      {/* Continue button */}
+      
 
       <button
         className="continue-button"

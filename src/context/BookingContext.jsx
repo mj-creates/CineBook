@@ -13,7 +13,7 @@ export function useBooking() {
 
 export function BookingProvider({ children }) {
 
-  // Seats that are permanently booked
+  
   const [bookedSeats, setBookedSeats] = useState(() => {
 
     const saved =
@@ -25,20 +25,20 @@ export function BookingProvider({ children }) {
   });
 
 
-  // Seats currently selected by the user
+  
   const [selectedSeats, setSelectedSeats] = useState([]);
 
 
-  // 2-minute timer
+  
   const [timeLeft, setTimeLeft] = useState(120);
 
 
-  // Is timer running?
+  
   const [timerRunning, setTimerRunning] =
     useState(false);
 
 
-  // Save booked seats
+  
   useEffect(() => {
 
     localStorage.setItem(
@@ -49,7 +49,7 @@ export function BookingProvider({ children }) {
   }, [bookedSeats]);
 
 
-  // TIMER
+  
   useEffect(() => {
 
     if (!timerRunning) {
@@ -61,7 +61,7 @@ export function BookingProvider({ children }) {
 
       setTimerRunning(false);
 
-      // Release selected seats
+      
       setSelectedSeats([]);
 
       alert(
@@ -86,14 +86,14 @@ export function BookingProvider({ children }) {
   }, [timerRunning, timeLeft]);
 
 
-  // Create unique key for movie + showtime
+  
   function getShowKey(movieId, showtime) {
 
     return `${movieId}_${showtime}`;
   }
 
 
-  // Get booked seats for a particular show
+  
   function getBookedSeats(movieId, showtime) {
 
     const key =
@@ -103,7 +103,7 @@ export function BookingProvider({ children }) {
   }
 
 
-  // SELECT / DESELECT SEAT
+  
   function toggleSeat(
     seatNumber,
     movieId,
@@ -114,7 +114,7 @@ export function BookingProvider({ children }) {
       getBookedSeats(movieId, showtime);
 
 
-    // Do nothing if seat is already booked
+    
     if (alreadyBooked.includes(seatNumber)) {
       return;
     }
@@ -122,7 +122,7 @@ export function BookingProvider({ children }) {
 
     setSelectedSeats(previousSeats => {
 
-      // Deselect
+      
       if (previousSeats.includes(seatNumber)) {
 
         return previousSeats.filter(
@@ -132,7 +132,7 @@ export function BookingProvider({ children }) {
       }
 
 
-      // Select
+      
       return [
         ...previousSeats,
         seatNumber
@@ -143,7 +143,7 @@ export function BookingProvider({ children }) {
   }
 
 
-  // START TIMER
+  
   function startTimer() {
 
     setTimeLeft(120);
@@ -153,7 +153,7 @@ export function BookingProvider({ children }) {
   }
 
 
-  // STOP TIMER
+  
   function stopTimer() {
 
     setTimerRunning(false);
@@ -161,7 +161,7 @@ export function BookingProvider({ children }) {
   }
 
 
-  // PAYMENT SUCCESS
+  
   function confirmBooking(
     movieId,
     showtime
@@ -196,17 +196,17 @@ export function BookingProvider({ children }) {
     });
 
 
-    // Stop timer
+    
     setTimerRunning(false);
 
 
-    // Clear selection
+    
     setSelectedSeats([]);
 
   }
 
 
-  // Format timer
+  
   function formatTime() {
 
     const minutes =
